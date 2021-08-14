@@ -26,6 +26,5 @@ module.exports = {
         msg.react('2️⃣')
       })
       .catch(err => console.error(err))
-    //         return message.reply(name, output)
   }
 }
