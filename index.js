@@ -8,6 +8,7 @@ const Commands = require('./dispatchers/commandDispatch')
 
 const client = new Discord.Client() // Initiates the client
 client.botConfig = Config // Stores the config inside the client object so it's auto injected wherever we use the client
+client.botConfig.token = process.env.DISCORD_BOT_TOKEN
 client.botConfig.rootDir = __dirname // Stores the running directory in the config so we don't have to traverse up directories.
 
 // Loads our handler functions that do all the work
@@ -29,8 +30,9 @@ client.on('message', message => {
 })
 
 // Log the bot in using the token provided in the config file
-client
-  .login(client.botConfig.token || process.env.DISCORD_BOT_TOKEN)
-  .catch(err => {
-    console.log(`Failed to authenticate with Discord network: "${err.message}"`)
-  })
+const token = client.botConfig.token
+client.login(token).catch(err => {
+  console.log(
+    `Failed to authenticate with Discord network: "${err.message}", token was ${token}`
+  )
+})

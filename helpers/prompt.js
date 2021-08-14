@@ -13,6 +13,6 @@ module.exports = {
         console.error(err)
       }
     }
-    return prompts[Math.floor(Math.random() * promps.length)] // TODO use shuffle/next instead
+    return prompts[Math.floor(Math.random() * prompts.length)] // TODO use shuffle/next instead
   }
 }
