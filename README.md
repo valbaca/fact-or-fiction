@@ -12,16 +12,13 @@ This game is a fun alternative to arguing over how to roll a die.
 
 ### DONE
 
-- Nothing!
+- Display random cards from scryfall
+- Add reactions (or some other voting mechanism)
 ### TODO
 
-- Setup hosting (how to handle discord bot token?)
-- Display random cards from scryfall
 - Gather list of prompts
-
-
+- Setup hosting (how to handle discord bot token? pass in as env/arg?)
+- Use shuffle instead of random
 ### MAYBE
 
-- Add reactions (or some other voting mechanism)
-- Allow best to be saved/shared
-- Allow prompts to be added/stored
+- Allow prompt ideas to be sent to the bot
