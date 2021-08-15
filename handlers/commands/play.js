@@ -2,7 +2,7 @@ const { randomPrompt } = require('../../helpers/prompt')
 const { randomCard } = require('../../helpers/scryfall')
 
 module.exports = {
-  name: 'play',
+  name: '',
   description: 'play Fact-or-Fiction!',
   args: false, // SOMEDAY: support args, like names? or card types?
   usage: '', // TODO
@@ -14,9 +14,10 @@ module.exports = {
     return Promise.all(cards)
       .then(data => {
         const [first, second] = data
-        const text = `Prompt: ${randomPrompt()}\n1: ${first.name} or 2: ${
-          second.name
-        }`
+        const text =
+          `Prompt: ${randomPrompt()}\n` +
+          `1: ${first.name} (${message.author}'s card)\n` +
+          `2: ${second.name} (opponent's card)`
         return message.channel.send(text, {
           files: [first.img, second.img]
         })

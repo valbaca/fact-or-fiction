@@ -16,6 +16,7 @@ module.exports = {
     // Split commands and arguments from message so they can be passed to functions
     const args = message.content
       .slice(client.botConfig.prefix.length)
+      .trim()
       .split(/ +/)
     const commandName = args.shift().toLowerCase()
 

@@ -15,10 +15,17 @@ This game is a fun alternative to arguing over how to roll a die.
 - Display random cards from scryfall
 - Add reactions
 - Setup hosting
+- Gather list of prompts
+- Remove "play" from the command, just `!fof`
+- No basic lands and no non-cards (like Vanguard)
+- Use "you" and "your opponent" instead of 1 & 2
+
 ### TODO
 
-- Gather list of prompts
-- Use shuffle instead of random
+- Allow prompts to be filtering by card type, like "Only spells" or "Only creatures"
+- Use shuffle prompts instead of random (so they don't get repeated)
+
 ### MAYBE
 
+- Move to ClojureScript (just because)
 - Allow prompt ideas to be sent to the bot
