@@ -76,6 +76,7 @@ module.exports = {
      */
 
     try {
+      console.log(`Running command message=${message} with args=${args}`)
       // Run the command
       command.execute(message, args).catch(err => {
         console.error(

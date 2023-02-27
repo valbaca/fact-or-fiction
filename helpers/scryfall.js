@@ -7,7 +7,7 @@ module.exports = {
       '-(t:land t:basic)', // no basics
       'not:extra' // no weird cards
     ]
-    const query = encodeURI(filters.join(' ')) // no basics
+    const query = encodeURI(filters.join(' '))
     const uri = `https://api.scryfall.com/cards/random?q=${query}`
     return request(uri)
       .then(({ response, body }) => {
