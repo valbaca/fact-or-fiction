@@ -1,5 +1,6 @@
 const { randomPrompt } = require('../../helpers/prompt')
 const { randomCard } = require('../../helpers/scryfall')
+const { MessageEmbed } = require('discord.js')
 
 module.exports = {
   name: '',
@@ -14,11 +15,12 @@ module.exports = {
     return Promise.all(cards)
       .then(data => {
         const [first, second] = data
-        const text =
+        const content =
           `Prompt: ${randomPrompt()}\n` +
           `1: ${first.name} (${message.author}'s card)\n` +
           `2: ${second.name} (opponent's card)`
-        return message.channel.send(text, {
+        return message.channel.send({
+          content,
           files: [first.img, second.img]
         })
       })
