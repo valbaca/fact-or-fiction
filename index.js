@@ -29,7 +29,6 @@ client.on('ready', () => {
 
 // Handle user messages
 client.on('messageCreate', message => {
-  console.log(`on message ${JSON.stringify(message.content)}`)
   // Check for structured commands
   if (Commands.handle(client, message, cooldowns)) {
     return // If we handled a command, don't continue to handle events for the same message
