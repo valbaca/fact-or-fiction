@@ -1,5 +1,5 @@
 {
-  "name": "simple-discord-js-bot",
+  "name": "fact-or-fiction-bot",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -7,12 +7,12 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Morgan Breden @bredmor",
+  "author": "Valentin Baca valbaca@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.16.2",
     "hjson": "^3.2.2",
-    "pm2": "^5.2.2",
-    "request": "^2.88.0"
+    "pm2": "^5.4.2",
+    "request": "^2.88.2"
   }
 }
