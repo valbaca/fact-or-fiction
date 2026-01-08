@@ -10,7 +10,7 @@
   "author": "Valentin Baca valbaca@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.16.2",
+    "discord.js": "^14.25.1",
     "hjson": "^3.2.2",
     "pm2": "^5.4.2",
     "request": "^2.88.2"
